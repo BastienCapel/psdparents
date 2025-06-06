@@ -1,0 +1,489 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Résultats de l'enquête du Plan Stratégique de Développement du LFJP</title>
+    
+    <!-- Polices Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&family=Open+Sans:wght@300;400;500;600&display=swap" rel="stylesheet">
+    
+    <!-- Bibliothèque Chart.js pour les graphiques -->
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    
+    <!-- Styles -->
+    <link rel="stylesheet" href="css/normalize.css">
+    <link rel="stylesheet" href="css/min/styles.min.css">
+</head>
+<body>
+    <!-- En-tête fixe -->
+    <header class="header">
+        <div class="container header-container">
+            <div class="logo">
+                <img src="images/logo-lfjp.png" alt="Logo LFJP" class="logo-img">
+                <div class="logo-text">
+                    <h1>Enquête<br>Plan Stratégique</h1>
+                </div>
+            </div>
+            <nav class="main-nav">
+                <ul class="nav-list">
+                    <li><a href="#introduction" class="nav-link">Introduction</a></li>
+                    <li><a href="#recommandation" class="nav-link">Recommandation</a></li>
+                    <li><a href="#pourquoi" class="nav-link">Pourquoi le LFJP</a></li>
+                    <li><a href="#information" class="nav-link">Information</a></li>
+                    <li><a href="#installations" class="nav-link">Installations</a></li>
+                    <li><a href="#offre" class="nav-link">Offre scolaire</a></li>
+                    <li><a href="#priorites" class="nav-link">Priorités</a></li>
+                    <li><a href="#synthese" class="nav-link">Synthèse</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Barre latérale de navigation -->
+    <aside class="sidebar">
+        <div class="sidebar-content">
+            <h2>Sommaire</h2>
+            <ul class="sidebar-nav">
+                <li><a href="#introduction" class="sidebar-link">Introduction & Méthodologie</a></li>
+                <li><a href="#recommandation" class="sidebar-link">Indicateur de recommandation</a></li>
+                <li><a href="#pourquoi" class="sidebar-link">Pourquoi choisir le LFJP</a></li>
+                <li><a href="#information" class="sidebar-link">Qualité de l'information</a></li>
+                <li><a href="#installations" class="sidebar-link">Installations & Équipements</a></li>
+                <li><a href="#offre" class="sidebar-link">Offre scolaire & Enseignements</a></li>
+                <li><a href="#accompagnement" class="sidebar-link">Accompagnement des élèves</a></li>
+                <li><a href="#points-forts" class="sidebar-link">Points forts perçus</a></li>
+                <li><a href="#priorites" class="sidebar-link">Priorités futures</a></li>
+                <li><a href="#ecolages" class="sidebar-link">Acceptabilité hausse écolages</a></li>
+                <li><a href="#commentaires" class="sidebar-link">Commentaires libres</a></li>
+                <li><a href="#synthese" class="sidebar-link">Synthèse & Plan d'action</a></li>
+            </ul>
+        </div>
+    </aside>
+
+    <!-- Contenu principal -->
+    <main class="main-content">
+        <!-- Section d'en-tête -->
+        <section class="hero">
+            <div class="container">
+                <h1 class="main-title">Résultats de l'enquête du Plan Stratégique de Développement du LFJP</h1>
+                <h2 class="subtitle">Analyse des réponses des parents</h2>
+                <a href="#introduction" class="cta-button">Explorer les résultats</a>
+            </div>
+        </section>
+
+        <!-- Section Introduction -->
+        <section id="introduction" class="section">
+            <div class="container">
+                <h2 class="section-title">Introduction & Méthodologie</h2>
+                <div class="section-content">
+                    <p>Cette présentation expose les résultats de l'enquête menée auprès des parents dans le cadre du Plan Stratégique de Développement du LFJP.</p>
+                    
+                    <h3>Méthodologie</h3>
+                    <ul>
+                        <li><strong>Échantillon :</strong> 107 réponses</li>
+                        <li><strong>Profil :</strong> Plus de la moitié (51%) des répondants n'ont qu'un seul enfant inscrit</li>
+                        <li><strong>Barème :</strong> 1 = très insatisfaisant/pas prioritaire → 5 = très satisfaisant/priorité absolue</li>
+                    </ul>
+                    
+                    <p>Cette analyse vise à partager les résultats avec les membres de l'APE, sans prise de décision, celle-ci relevant du groupe de travail et du comité de gestion.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Section Indicateur de recommandation -->
+        <section id="recommandation" class="section">
+            <div class="container">
+                <h2 class="section-title">Indicateur de recommandation</h2>
+                <div class="section-content">
+                    <div class="chart-container">
+                        <canvas id="recommendationChart"></canvas>
+                    </div>
+                    <div class="analysis">
+                        <h3>Analyse</h3>
+                        <p>La quasi-totalité des familles (93%) se disent prêtes à promouvoir l'établissement : un capital de confiance solide à préserver.</p>
+                        
+                        <div class="key-insight">
+                            <p>Ce fort taux de recommandation témoigne de la satisfaction globale des parents envers l'établissement et constitue un atout majeur pour la réputation du LFJP.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Section Pourquoi les familles choisissent-elles le LFJP -->
+        <section id="pourquoi" class="section">
+            <div class="container">
+                <h2 class="section-title">Pourquoi les familles choisissent-elles le LFJP ?</h2>
+                <div class="section-content">
+                    <div class="chart-container">
+                        <canvas id="choiceChart"></canvas>
+                    </div>
+                    <div class="analysis">
+                        <h3>Analyse</h3>
+                        <p>La "continuité du cursus en France" apparaît comme le premier facteur de choix (4,40/5), devant même le partenariat AEFE (4,07/5).</p>
+                        
+                        <h4>Implications stratégiques</h4>
+                        <ul>
+                            <li>Maintenir l'homologation et la conformité totale aux programmes français</li>
+                            <li>Communiquer clairement sur les passerelles et équivalences pour les élèves amenés à rejoindre un établissement en France ou dans un autre réseau AEFE</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Section Qualité de l'information -->
+        <section id="information" class="section">
+            <div class="container">
+                <h2 class="section-title">Qualité de l'information fournie aux parents</h2>
+                <div class="section-content">
+                    <div class="chart-container">
+                        <canvas id="informationChart"></canvas>
+                    </div>
+                    <div class="analysis">
+                        <h3>Points forts</h3>
+                        <ul>
+                            <li>Pronote (4,32/5) - Outil plébiscité</li>
+                            <li>Inscriptions (4,13/5) - Processus fluide</li>
+                            <li>Actualité de l'APE-LFJP (4,02/5) - Communication appréciée</li>
+                        </ul>
+                        
+                        <h3>Points à améliorer</h3>
+                        <ul>
+                            <li>Options & sections (3,39/5) - Demande de visibilité accrue</li>
+                            <li>Sorties & voyages (3,58/5) - Préavis jugé trop court</li>
+                        </ul>
+                        
+                        <div class="key-insight">
+                            <p>Plusieurs parents réclament une information papier ou multi-canal pour toucher ceux qui lisent peu les mails.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Section Installations & Équipements -->
+        <section id="installations" class="section">
+            <div class="container">
+                <h2 class="section-title">Installations & Équipements</h2>
+                <div class="section-content">
+                    <div class="chart-container">
+                        <canvas id="installationsChart"></canvas>
+                    </div>
+                    <div class="analysis">
+                        <h3>Points critiques</h3>
+                        <ul>
+                            <li>Zones circulation externes (2,41/5) - Parking et sécurité routière très critiqués</li>
+                            <li>Équipements sportifs & vestiaires (2,73/5) - Manque de quantité et d'ombre</li>
+                            <li>Salles de classe (2,96/5) - Chaleur et acoustique récurrentes</li>
+                            <li>Sanitaires (2,98/5) - Propreté perfectible</li>
+                        </ul>
+                        
+                        <h4>Verbatims les plus fréquents</h4>
+                        <div class="verbatim-box">
+                            <p>Climatisation, parking, chaleur, sanitaires, circulation externe</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="offre" class="section">
+            <div class="container">
+                <h2 class="section-title">Offre scolaire et enseignements</h2>
+                <div class="section-content">
+                    <div class="chart-container">
+                        <canvas id="offreChart"></canvas>
+                    </div>
+                    <div class="analysis">
+                        <h3>Points forts</h3>
+                        <ul>
+                            <li>Citoyenneté & valeurs (3,85/5) - Dimension éducative appréciée</li>
+                            <li>Enseignement du français (3,77/5) - Niveau jugé élevé</li>
+                            <li>Ouverture culturelle (3,73/5) - Atout fort</li>
+                        </ul>
+                        
+                        <h3>Points à améliorer</h3>
+                        <ul>
+                            <li>Options payantes (3,04/5) - Rapport coût/choix à optimiser</li>
+                            <li>Anglais / espagnol (3,13/5) - Qualité variable ; besoin de "native speakers"</li>
+                            <li>Offre linguistique (global) (3,22/5) - Parents souhaitent renforcer l'anglais</li>
+                        </ul>
+                        
+                        <div class="key-insight">
+                            <p>L'enseignement des langues étrangères, en particulier l'anglais, apparaît comme un axe d'amélioration prioritaire pour les parents, qui souhaitent notamment des enseignants natifs et un renforcement de l'offre linguistique.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="accompagnement" class="section">
+            <div class="container">
+                <h2 class="section-title">Accompagnement des élèves</h2>
+                <div class="section-content">
+                    <div class="chart-container">
+                        <canvas id="accompagnementChart"></canvas>
+                    </div>
+                    <div class="analysis">
+                        <h3>Points forts</h3>
+                        <ul>
+                            <li>ASEM (maternelle) (4,24/5) - Point fort majeur de l'établissement</li>
+                            <li>Professeur des écoles (3,81/5) - Relation individualisée appréciée</li>
+                            <li>Professeur principal (secondaire) (3,72/5) - Soutien reconnu</li>
+                        </ul>
+                        
+                        <h3>Points à améliorer</h3>
+                        <ul>
+                            <li>Professeurs du secondaire (3,54/5) - Qualité perçue comme hétérogène</li>
+                        </ul>
+                        
+                        <div class="key-insight">
+                            <h4>Demandes des parents</h4>
+                            <ul>
+                                <li>Davantage de soutien en langues</li>
+                                <li>Meilleure répartition des évaluations</li>
+                                <li>Plus grande coordination entre les enseignants du secondaire</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="points-forts" class="section">
+            <div class="container">
+                <h2 class="section-title">Points forts perçus</h2>
+                <div class="section-content">
+                    <div class="chart-container">
+                        <canvas id="pointsFortsChart"></canvas>
+                    </div>
+                    <div class="analysis">
+                        <h3>Atouts majeurs</h3>
+                        <ul>
+                            <li>Culture française (3,79/5) - Dimension identitaire jugée essentielle</li>
+                            <li>Ouverture culturelle (3,73/5) - Richesse des événements culturels</li>
+                            <li>Inclusion (3,41/5) - Effort d'intégration de tous les élèves</li>
+                        </ul>
+                        
+                        <h3>Atouts secondaires</h3>
+                        <ul>
+                            <li>International (3,36/5) - Ouverture sur le monde</li>
+                            <li>Sciences (3,22/5) - Enseignement scientifique de qualité</li>
+                            <li>Numérique (3,18/5) - Intégration des technologies</li>
+                            <li>Sport (3,15/5) - Dynamisme malgré le manque d'équipements</li>
+                            <li>Plurilinguisme (3,01/5) - Potentiel à développer davantage</li>
+                        </ul>
+                        
+                        <div class="key-insight">
+                            <p>Les parents saluent particulièrement la richesse des événements culturels et le taux de réussite aux examens, qui témoignent de la qualité de l'enseignement et de l'ouverture culturelle de l'établissement.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="priorites" class="section">
+            <div class="container">
+                <h2 class="section-title">Priorités pour les prochaines années</h2>
+                <div class="section-content">
+                    <div class="chart-container">
+                        <canvas id="prioritesChart"></canvas>
+                    </div>
+                    <div class="analysis">
+                        <h3>Priorités majeures (notes ≥ 4)</h3>
+                        <div class="priority-cards">
+                            <div class="priority-card">
+                                <h4>1. Restauration scolaire</h4>
+                                <p class="priority-score">4,40/5</p>
+                                <p>Offre saine, abordable, et infrastructure adaptée (espace couvert)</p>
+                            </div>
+                            <div class="priority-card">
+                                <h4>2. Climatisation des salles</h4>
+                                <p class="priority-score">4,33/5</p>
+                                <p>Confort thermique : climatisation couplée à isolation et solutions solaires</p>
+                            </div>
+                            <div class="priority-card">
+                                <h4>3. Développement du plurilinguisme</h4>
+                                <p class="priority-score">4,24/5</p>
+                                <p>Renforcement de l'anglais dès la maternelle, recrutement d'enseignants natifs</p>
+                            </div>
+                        </div>
+                        
+                        <h3>Priorités secondaires</h3>
+                        <ul>
+                            <li>Équipements sportifs (3,93/5) - Amélioration des infrastructures</li>
+                            <li>Numérique éducatif (3,92/5) - Ressources et formation des enseignants</li>
+                            <li>Transport scolaire (3,48/5) - Organisation et sécurité</li>
+                        </ul>
+                        
+                        <h3>Éléments peu prioritaires</h3>
+                        <ul>
+                            <li>Garderie matinale (2,49/5) - Peu de demande</li>
+                            <li>Augmentation des effectifs (2,68/5) - Non souhaitée par les parents</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="ecolages" class="section">
+            <div class="container">
+                <h2 class="section-title">Acceptabilité d'une hausse des écolages</h2>
+                <div class="section-content">
+                    <div class="chart-container">
+                        <canvas id="ecolagesChart"></canvas>
+                    </div>
+                    <div class="analysis">
+                        <h3>Domaines pour lesquels une hausse serait acceptée</h3>
+                        <p>Les familles accepteraient prioritairement un surcoût pour :</p>
+                        <ul>
+                            <li>Climatisation des salles de classe</li>
+                            <li>Restauration scolaire de qualité</li>
+                            <li>Équipements sportifs</li>
+                            <li>Numérique éducatif</li>
+                            <li>Couverture du terrain</li>
+                        </ul>
+                        
+                        <h3>Domaines pour lesquels une hausse serait refusée</h3>
+                        <p>Les familles sont réticentes à une hausse des écolages pour :</p>
+                        <ul>
+                            <li>Accueillir plus d'élèves</li>
+                        </ul>
+                        
+                        <div class="key-insight">
+                            <p>Les parents sont prêts à investir dans des améliorations concrètes qui bénéficient directement à la qualité de vie et d'apprentissage de leurs enfants, mais sont réticents à financer une simple augmentation de la capacité d'accueil.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="commentaires" class="section">
+            <div class="container">
+                <h2 class="section-title">Analyse des commentaires libres</h2>
+                <div class="section-content">
+                    <div class="comments-analysis">
+                        <h3>Thèmes récurrents</h3>
+                        <div class="comments-grid">
+                            <div class="comment-theme">
+                                <h4>Chaleur / climatisation</h4>
+                                <div class="verbatim">
+                                    <p class="quote">"Climatiser les classes est urgent", "Surchauffe déjà signalée"</p>
+                                </div>
+                            </div>
+                            <div class="comment-theme">
+                                <h4>Sécurité & circulation externes</h4>
+                                <div class="verbatim">
+                                    <p class="quote">Entrée "dangereuse", parking à créer, rues à bitumer</p>
+                                </div>
+                            </div>
+                            <div class="comment-theme">
+                                <h4>Coût des écolages</h4>
+                                <div class="verbatim">
+                                    <p class="quote">"Tarifs exorbitants", crainte d'augmentations</p>
+                                </div>
+                            </div>
+                            <div class="comment-theme">
+                                <h4>Espaces verts & jeux</h4>
+                                <div class="verbatim">
+                                    <p class="quote">Manque d'ombre, d'aires pour filles, mobilier cassé</p>
+                                </div>
+                            </div>
+                            <div class="comment-theme">
+                                <h4>Communication délais</h4>
+                                <div class="verbatim">
+                                    <p class="quote">Examens du samedi annoncés tard, infos voyages trop tardives</p>
+                                </div>
+                            </div>
+                            <div class="comment-theme">
+                                <h4>Qualité des langues</h4>
+                                <div class="verbatim">
+                                    <p class="quote">Besoin de professeurs natifs, plus d'anglais précoce</p>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="key-insight">
+                            <p>Les commentaires libres confirment les tendances observées dans les questions fermées, avec une forte préoccupation pour le confort thermique, la sécurité aux abords de l'établissement et la qualité de l'enseignement des langues.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="synthese" class="section">
+            <div class="container">
+                <h2 class="section-title">Synthèse et plan d'action proposé</h2>
+                <div class="section-content">
+                    <h3>Trois urgences partagées par les familles</h3>
+                    <div class="priorities-grid">
+                        <div class="priority-item">
+                            <div class="priority-icon">🌡️</div>
+                            <h4>Confort thermique</h4>
+                            <p>Climatisation couplée à isolation et solutions solaires</p>
+                        </div>
+                        <div class="priority-item">
+                            <div class="priority-icon">🍽️</div>
+                            <h4>Restauration scolaire</h4>
+                            <p>Offre saine, abordable, et infrastructure adaptée (espace couvert)</p>
+                        </div>
+                        <div class="priority-item">
+                            <div class="priority-icon">🚗</div>
+                            <h4>Mobilité & sécurité</h4>
+                            <p>Réaménagement du parking et des abords, sensibilisation circulation</p>
+                        </div>
+                    </div>
+                    
+                    <h3>Plan d'action proposé</h3>
+                    <div class="action-plan">
+                        <div class="action-axis">
+                            <h4>Axe 1 – Bien-être & infrastructures</h4>
+                            <p>Climatisation, sanitaires, espaces verts, sécurité externe</p>
+                        </div>
+                        <div class="action-axis">
+                            <h4>Axe 2 – Expérience élève & famille</h4>
+                            <p>Restauration, plurilinguisme, périscolaire de qualité, projets & voyages</p>
+                        </div>
+                        <div class="action-axis">
+                            <h4>Axe 3 – Communication & gouvernance</h4>
+                            <p>Calendrier annuel d'information, tableau de bord financier simplifié, consultations régulières parents/élèves</p>
+                        </div>
+                    </div>
+                    
+                    <div class="conclusion">
+                        <p>En démontrant une priorisation claire et un calendrier réaliste, le LFJP montrera qu'il prend pleinement en compte la voix des familles et consolidera la confiance de l'ensemble de la communauté éducative.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Pied de page -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <img src="images/logo-ape.png" alt="Logo APE-LFJP" class="footer-logo">
+                <div class="footer-info">
+                    <p>Enquête réalisée dans le cadre du Plan Stratégique de Développement du LFJP</p>
+                    <p>&copy; 2025 APE-LFJP - Tous droits réservés</p>
+                </div>
+                <div class="footer-contact">
+                    <p>Pour plus d'informations : <a href="mailto:contact@ape-lfjp.org">contact@ape-lfjp.org</a></p>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Bouton de retour en haut -->
+    <button id="back-to-top" class="back-to-top" aria-label="Retour en haut">↑</button>
+
+    <!-- Scripts -->
+    <script src="js/min/main.min.js"></script>
+    <script src="js/min/charts.min.js"></script>
+</body>
+</html>
+
