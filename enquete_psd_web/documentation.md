@@ -152,6 +152,26 @@ La page utilise Chart.js pour les graphiques. Si vous souhaitez mettre à jour c
 2. Remplacez le lien CDN dans l'en-tête du fichier `index.html`
 3. Testez que tous les graphiques fonctionnent correctement après la mise à jour
 
+## Tests
+
+Une suite de tests automatisés permet de vérifier certaines interactions JavaScript.
+Les tests utilisent **Jest** avec l'environnement **jsdom**.
+
+### Exécuter les tests
+
+1. Installez les dépendances Node.js (Jest et jsdom) :
+
+   ```bash
+   npm install
+   ```
+
+2. Lancez les tests avec :
+
+   ```bash
+   npm test
+   ```
+
+
 ## Support
 
 Pour toute question ou assistance technique concernant cette page web, veuillez contacter :

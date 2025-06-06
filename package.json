@@ -1,0 +1,16 @@
+{
+  "name": "psdparents",
+  "version": "1.0.0",
+  "description": "Testing setup for menu toggle",
+  "scripts": {
+    "test": "jest"
+  },
+  "devDependencies": {
+    "jest": "^29.7.0",
+    "jest-environment-jsdom": "^30.0.0-beta.3",
+    "jsdom": "^24.0.0"
+  },
+  "jest": {
+    "testEnvironment": "jsdom"
+  }
+}
