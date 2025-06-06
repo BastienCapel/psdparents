@@ -20,7 +20,9 @@ document.addEventListener('DOMContentLoaded', function() {
     navLinks.forEach(link => {
         link.addEventListener('click', function() {
             if (window.innerWidth <= 768) {
-                menuToggle.classList.remove('active');
+                if (menuToggle) {
+                    menuToggle.classList.remove('active');
+                }
                 navList.classList.remove('active');
             }
         });
